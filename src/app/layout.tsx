@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} min-h-screen flex flex-col bg-[#1C1C1C]`}>
         <Header />
-        <main className="flex-grow">
+        <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           {children}
         </main>
         <Footer />
