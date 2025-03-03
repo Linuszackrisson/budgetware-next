@@ -13,7 +13,7 @@ export function Hero() {
     Save money without compromising on quality.
     Explore our collection of powerful free software alternatives.
     </p>
-          <button className="mt-8 bg-emerald-600 text-white px-4 py-2 rounded-md">Explore</button>
+          <button className="mt-8 text-emerald-500 border border-emerald-500 px-4 py-2 rounded-md transition-all hover:bg-emerald-500 hover:text-white">Explore</button>
         </div>
       </div>
     </div>

@@ -30,7 +30,25 @@ export default function Header() {
               </li>
               <li>
                 <a href="#software-list" className="text-gray-400 hover:text-emerald-400 transition-colors">
-                  Linus Choice
+                  Categories
+                </a>
+              </li>
+              <li>
+                <a href="#software-list" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  Our Choice
+                </a>
+              </li>
+              <li>
+                <a href="#software-list" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  About us
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#software-list" 
+                  className="border border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white px-4 py-2 rounded-lg transition-all"
+                >
+                  Contact
                 </a>
               </li>
              

@@ -14,7 +14,7 @@ export function SoftwareCard(props: SoftwareCardProps) {
   return (
     <Link 
       href={`/software/${props.id}`}
-      className="block border border-gray-800 rounded-lg p-6 hover:border-emerald-500/50 transition-colors"
+      className="block border border-gray-600 rounded-lg p-6 hover:border-emerald-500/50 transition-colors bg-[#171717]"
     >
       <div className="flex flex-col h-full">
         <h2 className="text-xl font-bold text-white mb-2">{props.name}</h2>
