@@ -9,12 +9,10 @@ export default async function Home() {
 
   return (
     <>
-      <Header />
       <main>
         <Hero />
         <SoftwareList software={software} />
       </main>
-      <Footer />
     </>
   );
 }

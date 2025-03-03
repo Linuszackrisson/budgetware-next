@@ -1,13 +1,18 @@
 export type SoftwareCategory =
-  | 'Bildbehandling'
-  | 'Videoredigering'
-  | 'Ljudredigering'
-  | 'Kontorsverktyg'
-  | 'Utvecklingsverktyg'
-  | 'Webbläsare'
-  | 'Säkerhet'
-  | 'Kommunikation'
-  | 'Systemverktyg';
+  | 'Image Editing'
+  | 'Video Editing'
+  | 'Audio Production'
+  | 'Office Tools'
+  | 'Development Tools'
+  | '3D Graphics'
+  | 'Education'
+  | 'Security'
+  | 'Utilities'
+  | 'Communication'
+  | 'Design Tools'
+  | 'System Tools'
+  | 'Gaming'
+  | 'Productivity';
 
 export interface Software {
   id: number;

@@ -16,3 +16,4 @@ export default async function SoftwarePage({ params }: PageProps) {
     notFound();
   }
 }
+
