@@ -32,7 +32,6 @@ export default async function Home() {
         <div className="flex items-center justify-between mb-12">
           <div>
             <h2 className="text-3xl font-semibold text-white">Browse Categories</h2>
-            <p className="mt-2 text-gray-400">Find the tools you need</p>
           </div>
           <a href="/categories" className="text-emerald-500 hover:text-emerald-400 transition-colors">
             View all categories →
