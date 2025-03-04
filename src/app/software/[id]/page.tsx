@@ -29,4 +29,4 @@ export default async function SoftwarePage({ params }: PageProps) {
     notFound();
   }
 }
-/* Detta är sub page för software page som bara visar en specifik mjukvara och dess relaterade mjukvara. Nextjs är speciellt ibland svårt att förstå. */
+

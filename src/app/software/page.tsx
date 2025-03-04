@@ -31,7 +31,7 @@ export default function SoftwarePage() {
           className={`px-4 py-2 rounded-full border text-sm transition-all ${
             selectedCategory === null
               ? 'bg-emerald-500 border-emerald-500 text-white'
-              : 'bg-[#171717] border-gray-600 text-gray-300 hover:border-emerald-500/50 hover:text-emerald-400'
+              : 'bg-[#171717] border-gray-600/40 text-gray-300 hover:border-emerald-500/50 hover:text-emerald-400'
           }`}
         >
           All
@@ -43,7 +43,7 @@ export default function SoftwarePage() {
             className={`px-4 py-2 rounded-full border text-sm transition-all ${
               selectedCategory === category
                 ? 'bg-emerald-500 border-emerald-500 text-white'
-                : 'bg-[#171717] border-gray-600 text-gray-300 hover:border-emerald-500/50 hover:text-emerald-400'
+                : 'bg-[#171717] border-gray-600/40 text-gray-300 hover:border-emerald-500/50 hover:text-emerald-400'
             }`}
           >
             {category}
