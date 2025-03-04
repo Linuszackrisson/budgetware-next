@@ -1,13 +1,19 @@
 import { Hero } from '@/components/Hero';
 import { SoftwareList } from '@/components/SoftwareList';
 import { getSoftware } from './api/api';
-import { PhotoIcon, VideoCameraIcon, MusicalNoteIcon, CommandLineIcon } from '@heroicons/react/24/outline';
 import { CategoryCard } from '@/components/CategoryCard';
+import { categoryIcons } from '@/app/config/icons';
+
+// Välj ut de kategorier vi vill visa på startsidan
 const mainCategories = {
-  'Image Editing': PhotoIcon,
-  'Video Editing': VideoCameraIcon,
-  'Audio Production': MusicalNoteIcon,
-  'Development Tools': CommandLineIcon,
+  'Image Editing': categoryIcons['Image Editing'],
+  'Video Editing': categoryIcons['Video Editing'],
+  'Audio Production': categoryIcons['Audio Production'],
+  'Development Tools': categoryIcons['Development Tools'],
+  'Office Tools': categoryIcons['Office Tools'],
+  '3D Graphics': categoryIcons['3D Graphics'],
+  'Security': categoryIcons['Security'],
+  'Utilities': categoryIcons['Utilities']
 };
 
 export default async function Home() {
@@ -23,7 +29,7 @@ export default async function Home() {
             View all software →
           </a>
         </div>
-        <SoftwareList software={software.slice(0, 6)} />
+        <SoftwareList software={software.slice(0, 3)} />
       </section>
 
       <section className="py-20">
