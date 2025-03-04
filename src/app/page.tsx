@@ -3,7 +3,6 @@ import { SoftwareList } from '@/components/SoftwareList';
 import { getSoftware } from './api/api';
 import { PhotoIcon, VideoCameraIcon, MusicalNoteIcon, CommandLineIcon } from '@heroicons/react/24/outline';
 import { CategoryCard } from '@/components/CategoryCard';
-
 const mainCategories = {
   'Image Editing': PhotoIcon,
   'Video Editing': VideoCameraIcon,
@@ -17,7 +16,6 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      
       <section className="pt-12 pb-16">
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-3xl font-semibold text-white">Recently Added</h2>
