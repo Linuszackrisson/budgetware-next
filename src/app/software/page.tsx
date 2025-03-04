@@ -1,5 +1,5 @@
 import { getSoftware } from '../api/api';
-import { SoftwareList } from '@/components/SoftwareList';
+import { SoftwareTable } from '@/components/SoftwareTable';
 
 export default async function SoftwarePage() {
   const software = await getSoftware();
@@ -11,7 +11,9 @@ export default async function SoftwarePage() {
         <p className="text-gray-400">Browse our collection of free and open source software</p>
       </div>
 
-      <SoftwareList software={software} />
+      <SoftwareTable software={software} />
     </div>
   );
 }
+
+/* Detta är /software sida som visar ALLLAAAAAAA mjukvaror. */

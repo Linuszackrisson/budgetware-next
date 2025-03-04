@@ -24,7 +24,7 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a href="#software-list" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="/software" className="text-gray-400 hover:text-emerald-400 transition-colors">
                   Software
                 </a>
               </li>
