@@ -11,9 +11,9 @@ export function SoftwareCard(props: SoftwareCardProps) {
   return (
     <Link 
       href={`/software/${props.id}`}
-      className="group block bg-[#171717] rounded-xl overflow-hidden border border-gray-500 hover:border-emerald-500/50 transition-all"
+      className="group block bg-[#171717] rounded-xl overflow-hidden border border-gray-600/40 hover:border-emerald-500/50 transition-all"
     >
-      <div className="p-4 flex items-center gap-4 border-b border-gray-500">
+      <div className="p-4 flex items-center gap-4 border-b border-gray-600/40">
         <div className="relative w-16 h-16 rounded-lg flex items-center justify-center">
           {props.image_url ? (
             <div className="relative w-16 h-16">

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="border-b border-gray-500 backdrop-blur-lg sticky top-0 z-50">
+    <header className="border-b border-gray-600/40 backdrop-blur-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
@@ -11,7 +11,7 @@ export default function Header() {
               <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <span className="text-xl font-bold text-emerald-500 bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
+            <span className="text-xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
               BudgetWare
             </span>
           </div>
@@ -19,27 +19,27 @@ export default function Header() {
           <nav>
             <ul className="flex items-center gap-8">
               <li>
-                <a href="/" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="/" className="text-white hover:text-emerald-400 transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/software" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="/software" className="text-white hover:text-emerald-400 transition-colors">
                   Software
                 </a>
               </li>
               <li>
-                <a href="/categories" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="/categories" className="text-white hover:text-emerald-400 transition-colors">
                   Categories
                 </a>
               </li>
               <li>
-                <a href="#software-list" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="/our-choice" className="text-white hover:text-emerald-400 transition-colors">
                   Our Choice
                 </a>
               </li>
               <li>
-                <a href="#software-list" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="#software-list" className="text-white hover:text-emerald-400 transition-colors">
                   About us
                 </a>
               </li>
