@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { getSoftware } from '../api/api';
 import { SoftwareTable } from '@/components/SoftwareTable';
-import { categoryIcons } from '@/components/CategoriesList';
+import { categoryIcons } from '@/app/config/icons';
 import type { Software } from '@/types/types';
 
 export default function SoftwarePage() {

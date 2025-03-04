@@ -32,4 +32,4 @@ export const categoryIcons = {
   'Productivity': ClipboardDocumentListIcon
 } as const;
 
-export type CategoryIcon = typeof categoryIcons[keyof typeof categoryIcons];
+export type CategoryIcon = typeof categoryIcons[keyof typeof categoryIcons]; 
