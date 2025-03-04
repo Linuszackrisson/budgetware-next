@@ -23,7 +23,7 @@ export default async function Home() {
             View all software →
           </a>
         </div>
-        <SoftwareList software={software.slice(0, 3)} />
+        <SoftwareList software={software.slice(0, 6)} />
       </section>
 
       <section className="py-20">
