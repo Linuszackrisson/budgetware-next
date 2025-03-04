@@ -1,10 +1,5 @@
-import { Software } from '@/types/software';
+import { SoftwareDetailProps } from '@/types/types';
 import { SoftwareList } from './SoftwareList';
-
-interface SoftwareDetailProps {
-  software: Software;
-  relatedSoftware: Software[];
-}
 
 export function SoftwareDetail({ software, relatedSoftware }: SoftwareDetailProps) {
   return (

@@ -1,10 +1,6 @@
-import { Software } from '@/types/software';
+import { SoftwareListProps } from '@/types/types';
 
-interface SoftwareTableProps {
-  software: Software[];
-}
-
-export function SoftwareTable({ software }: SoftwareTableProps) {
+export function SoftwareTable({ software }: SoftwareListProps) {
   return (
     <div className="bg-[#171717] border border-gray-500 rounded-xl overflow-hidden">
       <table className="w-full">

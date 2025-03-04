@@ -1,3 +1,6 @@
+import { type ElementType } from 'react';
+
+// Software types
 export type SoftwareCategory =
   | 'Image Editing'
   | 'Video Editing'
@@ -22,4 +25,19 @@ export interface Software {
   website: string;
   image_url: string;
   created_at: string;
-} 
+}
+
+// Component prop types
+export interface SoftwareListProps {
+  software: Software[];
+}
+
+export interface SoftwareDetailProps {
+  software: Software;
+  relatedSoftware: Software[];
+}
+
+export interface CategoryCardProps {
+  category: string;
+  Icon: ElementType;
+}

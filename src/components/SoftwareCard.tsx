@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Software } from '@/types/software';
+import { Software } from '@/types/types';
 
 type SoftwareCardProps = Omit<Software, 'id'> & { id: string };
 

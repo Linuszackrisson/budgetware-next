@@ -1,9 +1,4 @@
-import { type ElementType } from 'react';
-
-interface CategoryCardProps {
-  category: string;
-  Icon: ElementType;
-}
+import { CategoryCardProps } from '@/types/types';
 
 export function CategoryCard({ category, Icon }: CategoryCardProps) {
   return (

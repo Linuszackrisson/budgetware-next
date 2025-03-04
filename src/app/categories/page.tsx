@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase';
-import type { SoftwareCategory } from '@/types/software';
+import type { SoftwareCategory } from '@/types/types';
 import { categoryIcons } from '@/app/config/icons';
 import { CategoryCard } from '@/components/CategoryCard';
 
