@@ -2,16 +2,16 @@ import { SoftwareListProps } from '@/types/types';
 
 export function SoftwareTable({ software }: SoftwareListProps) {
   return (
-    <div className="bg-[#171717] border border-gray-500 rounded-xl overflow-hidden">
+    <div className="bg-[#171717] border border-gray-600/40 rounded-xl overflow-hidden">
       <table className="w-full">
-        <thead className="border-b border-gray-500">
+        <thead className="border-b border-gray-600/40">
           <tr>
             <th className="text-left p-4 text-gray-400 font-medium w-[20%]">Name</th>
             <th className="text-left p-4 text-gray-400 font-medium w-[20%]">Category</th>
             <th className="text-left p-4 text-gray-400 font-medium hidden md:table-cell w-[60%]">Description</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-gray-500">
+        <tbody className="divide-y divide-gray-600/40">
           {software.map((item) => (
             <tr key={item.id} className="hover:bg-black/20">
               <td className="p-4">
