@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getSoftwareById } from '../../api/api';
 import { SoftwareDetail } from '@/components/SoftwareDetail';
+import { supabase } from '@/lib/supabase';
 
 interface PageProps {
   params: {
@@ -11,9 +12,21 @@ interface PageProps {
 export default async function SoftwarePage({ params }: PageProps) {
   try {
     const software = await getSoftwareById(params.id);
-    return <SoftwareDetail software={software} />;
+    
+    // Hämta relaterad mjukvara från samma kategori
+    const { data: relatedSoftware } = await supabase
+      .from('software')
+      .select('*')
+      .eq('category', software.category)
+      .neq('id', software.id)
+      .limit(3);
+
+    return <SoftwareDetail 
+      software={software} 
+      relatedSoftware={relatedSoftware || []} 
+    />;
   } catch (error) {
     notFound();
   }
 }
-
+/* Detta är sub page för software page som bara visar en specifik mjukvara och dess relaterade mjukvara. Nextjs är speciellt ibland svårt att förstå. */

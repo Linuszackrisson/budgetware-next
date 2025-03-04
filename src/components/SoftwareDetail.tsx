@@ -1,45 +1,60 @@
 import { Software } from '@/types/software';
+import { SoftwareList } from './SoftwareList';
 
 interface SoftwareDetailProps {
   software: Software;
+  relatedSoftware: Software[];
 }
 
-export function SoftwareDetail({ software }: SoftwareDetailProps) {
+export function SoftwareDetail({ software, relatedSoftware }: SoftwareDetailProps) {
   return (
-    <div className="max-w-4xl mx-auto bg-[#1C1C1C] border border-gray-800 rounded-lg p-8">
-      <h1 className="text-3xl font-bold text-white mb-4">{software.name}</h1>
-      <div className="px-3 py-1 text-xs rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 w-fit mb-4">
-        {software.category}
+    <div className="max-w-4xl mx-auto space-y-8">
+      {/* Huvudkort */}
+      <div className="rounded-xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+          {/* Content sektion */}
+          <div className="flex flex-col space-y-4">
+            <div className="px-3 py-1 text-xs rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 w-fit">
+              {software.category}
+            </div>
+            <h1 className="text-3xl font-bold text-white">{software.name}</h1>
+            <p className="text-gray-300 text-lg leading-relaxed">{software.description}</p>
+            
+            <a
+              href={software.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors w-fit mt-auto"
+            >
+              Visit Website
+              
+            </a>
+          </div>
+
+          {/* Bild sektion */}
+          <div className="relative h-[300px] rounded-lg overflow-hidden">
+            {software.image_url ? (
+              <img 
+                src={software.image_url} 
+                alt={`Screenshot of ${software.name}`}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-6xl font-bold text-emerald-500/20">{software.name[0]}</div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-      {software.image_url && (
-        <div className="relative w-full max-h-[400px] rounded-lg overflow-hidden bg-black/50 mb-4">
-          <img 
-            src={software.image_url} 
-            alt={`Skärmdump av ${software.name}`}
-            className="object-contain w-full h-full"
-          />
+
+      {/* Relaterad mjukvara */}
+      {relatedSoftware.length > 0 && (
+        <div className="pt-8">
+          <h2 className="text-2xl font-semibold text-white mb-6">More {software.category} Software</h2>
+          <SoftwareList software={relatedSoftware} />
         </div>
       )}
-      <p className="text-gray-300 mb-4">{software.description}</p>
-      <a
-        href={software.website}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center text-emerald-500 hover:text-emerald-400 transition-colors"
-      >
-        Besök webbplats
-        <svg 
-          className="ml-2 w-4 h-4" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="currentColor" 
-          strokeWidth="2" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
-        >
-          <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-      </a>
     </div>
   );
 }
