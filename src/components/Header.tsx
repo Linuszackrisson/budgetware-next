@@ -29,7 +29,7 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a href="#software-list" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <a href="/categories" className="text-gray-400 hover:text-emerald-400 transition-colors">
                   Categories
                 </a>
               </li>

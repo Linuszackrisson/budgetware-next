@@ -35,3 +35,17 @@ export async function getSoftwareById(id: string): Promise<Software> {
 
   return data;
 }
+
+export async function getSoftwareByCategory(category: string) {
+  const { data, error } = await supabase
+    .from('software')
+    .select('*')
+    .eq('category', category)
+    .order('name');
+
+  if (error) {
+    throw new Error('Failed to fetch software by category');
+  }
+
+  return data || [];
+}

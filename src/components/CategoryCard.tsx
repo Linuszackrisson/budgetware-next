@@ -8,7 +8,7 @@ interface CategoryCardProps {
 export function CategoryCard({ category, Icon }: CategoryCardProps) {
   return (
     <a 
-      href={`/category/${category.toLowerCase()}`}
+      href={`/categories/${encodeURIComponent(category)}`}
       className="flex h-full p-6 bg-[#171717] rounded-xl border border-gray-500 hover:border-emerald-500/50 transition-all group"
     >
       <div className="flex items-center gap-4">
